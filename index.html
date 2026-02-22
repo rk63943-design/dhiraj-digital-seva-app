@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dhiraj Digital Seva</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background:#f4f4f4; }
+    .box { background:white; padding:20px; border-radius:8px; max-width:400px; margin:auto; }
+    input, select { width:100%; padding:8px; margin:8px 0; }
+    button { padding:10px; background:#0070f3; color:white; border:none; width:100%; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Dhiraj Digital Seva</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
+    <select required>
+      <option value="">Select Service</option>
+      <option>Aadhaar Update</option>
+      <option>PAN Card</option>
+      <option>Income Certificate</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  alert("Form Submitted Successfully!");
+}
+</script>
+
+</body>
+</html>
