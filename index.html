@@ -29,7 +29,24 @@
 <script>
 function submitForm(e){
   e.preventDefault();
-  alert("Form Submitted Successfully!");
+
+  const data = {
+    name: document.querySelector('input[type="text"]').value,
+    mobile: document.querySelector('input[type="tel"]').value,
+    service: document.querySelector('select').value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbyY7TxbVjhGpOLCwBsx8V5WQvWi3_0tUW66dHMIX04UD9bLDTa9YK204GkFoTiU6hcg/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(response => {
+    alert("Form Submitted Successfully!");
+  })
+  .catch(error => {
+    alert("Error submitting form");
+  });
 }
 </script>
 
